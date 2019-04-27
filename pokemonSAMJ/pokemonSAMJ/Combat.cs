@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pokemonSAMJ
 {
-    class SimulMatch : Match
+    class Combat
     {
     }
 }

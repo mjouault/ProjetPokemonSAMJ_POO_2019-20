@@ -15,7 +15,6 @@ namespace pokemonSAMJ
         {
             _nom = nom;
             _equipe = new List<Pokemon>();
-
         }
 
         public List<Pokemon> GenererEqu()

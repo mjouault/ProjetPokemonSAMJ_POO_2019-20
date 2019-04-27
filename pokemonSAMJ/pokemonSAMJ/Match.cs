@@ -8,11 +8,19 @@ namespace pokemonSAMJ
 {
     abstract class Match
     {
-        protected List<Joueur> combattant;
+        protected List<Joueur> _joueurs = new List<Joueur>();
+
+        public static void Choisir1er()
+        {
+            Random R = new Random();
+            int choix1er = R.Next(0, 2); ;
+
+            if (choix1er == 1)
+                Console.WriteLine(_joueurs[0]._nom + "commence !");
+            else
+                Console.WriteLine(_joueurs[1]._nom + "commence !");
+        }
     }
 
-    public void Choisir1er()
-    {
-    }
 
 }

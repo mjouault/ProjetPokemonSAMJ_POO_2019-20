@@ -11,7 +11,14 @@ namespace pokemonSAMJ
         public Ordi(string nom) : base(nom) { }
         public override void ChoisirPokemon()
         {
-            base.ChoisirPokemon();
+            Random R = new Random();
+            int choix = R.Next(0, 3);
+
+            foreach (Pokemon pokemon in _equipe)
+            {
+                if (pokemon._id == choix && pokemon.verifKo())
+                    pokemon.activer();
+            }
         }
     }
 }
