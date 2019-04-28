@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace pokemonSAMJ
 {
+    //Match opposant 2 joueurs jusqu'à ce que l'un perdent ses 3 pokemons (Ko)
     abstract class Match
     {
         protected List<Joueur> _joueurs = new List<Joueur>();

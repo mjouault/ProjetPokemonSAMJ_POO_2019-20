@@ -9,6 +9,10 @@ namespace pokemonSAMJ
     class Humain : Joueur
     {
         public Humain(string nom) : base(nom) { }
+
+        /// <summary>
+        /// ChoisirPokemon : procédure permettant au joueur de choisir un pokemon dans son équipe
+        /// </summary>
         public override void ChoisirPokemon()
         {
             Console.WriteLine("Choisir un Pokemon :");
@@ -19,7 +23,7 @@ namespace pokemonSAMJ
             int choix= int.Parse(Console.ReadLine());
             foreach (Pokemon pokemon in _equipe)
             {
-                if (pokemon._id == choix)
+                if (pokemon._id == choix && pokemon.verifKo())
                     pokemon.activer();
             }
         }
