@@ -18,6 +18,12 @@ namespace pokemonSAMJ
             {
                 if (pokemon._id == choix && pokemon.verifKo())
                     pokemon.activer();
+                // si le pokemon sélectionné est ko, on recommence  boucle while mais je ne sais comment réintroduire le foreach sans redondance
+                else
+                {
+                    R = new Random();
+                    choix = R.Next(0, 3);
+                }
             }
         }
     }
