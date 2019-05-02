@@ -9,9 +9,21 @@ namespace pokemonSAMJ
     //Match opposant 2 joueurs jusqu'à ce que l'un perdent ses 3 pokemons (Ko)
     abstract class Match
     {
-        protected List<Joueur> _joueurs = new List<Joueur>();
+        public Match(Humain j1, Ordi j2)
+        {
+            _j1 = j1; _j2 = j2;
+        }
 
-        public static void Choisir1er()
+        public Match(Ordi j1, Ordi j2)
+        {
+            _j1 = j1; _j2 = j2;
+        }
+
+        #region Attributes
+        Joueur _j1;
+        Joueur _j2;
+        #endregion
+        /*public static void Choisir1er()
         {
             Random R = new Random();
             int choix1er = R.Next(0, 2); ;
@@ -20,7 +32,7 @@ namespace pokemonSAMJ
                 Console.WriteLine(_joueurs[0]._nom + "commence !");
             else
                 Console.WriteLine(_joueurs[1]._nom + "commence !");
-        }
+        }*/
     }
 
 
